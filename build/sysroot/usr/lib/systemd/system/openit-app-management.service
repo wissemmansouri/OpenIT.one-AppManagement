@@ -1,0 +1,14 @@
+[Unit]
+After=openit-message-bus.service
+After=docker.service
+Description=OpenIT.one App Management Service
+
+[Service]
+ExecStartPre=/usr/bin/openit-app-management -v
+ExecStart=/usr/bin/openit-app-management -c /etc/openit/app-management.conf
+PIDFile=/var/run/openit/app-management.pid
+Restart=always
+Type=notify
+
+[Install]
+WantedBy=multi-user.target
