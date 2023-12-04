@@ -1,0 +1,12 @@
+[common]
+RuntimePath = /var/run/openit
+
+[app]
+LogPath = /var/log/openit/
+LogSaveName = app-management
+LogFileExt = log
+AppStorePath = /var/lib/openit/appstore
+AppsPath = /var/lib/openit/apps
+
+[server]
+appstore = https://github.com/wissemmansouri/_appstore/archive/refs/heads/main.zip
